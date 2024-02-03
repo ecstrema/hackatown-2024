@@ -1,6 +1,3 @@
 <template>
-  <div class="flex items-center justify-center">
-    <img src="../assets/icon.svg" class="icon-btn mx-2 text-2xl" alt="extension icon">
-    <div>Options</div>
-  </div>
+  <img src="../assets/logo.png" class="mx-2 text-2xl" alt="extension icon">
 </template>
