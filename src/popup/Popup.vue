@@ -16,8 +16,8 @@ const url = ref(currentItemName ? `https://www.facebook.com/marketplace/search/?
 </script>
 
 <template>
-  <main class="w-[300px] px-4 py-5 text-center text-gray-700 flex flex-col items-center">
-    <Logo />
+  <main class="w-[300px] px-4 py-5 text-center text-gray-700 flex flex-col items-center bg-[#5ad0d2]">
+    <img src="/assets/logo.png" alt="Logo" class="w-40 mb-4">
     <div
       v-if="url"
       class="bg-white text-gray-800 rounded-lg shadow w-max h-min p-2"
@@ -27,7 +27,7 @@ const url = ref(currentItemName ? `https://www.facebook.com/marketplace/search/?
       </a>
     </div>
 
-    <button class="btn mt-2" @click="openOptionsPage">
+    <button class="btn mt-2 bg-teal-800 hover:bg-teal-700 p-2 rounded-lg text-white font-bold" @click="openOptionsPage">
       Open Options
     </button>
   </main>
