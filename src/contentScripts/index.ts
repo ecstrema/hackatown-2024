@@ -2,11 +2,20 @@
 import { onMessage } from 'webext-bridge/content-script'
 import { createApp } from 'vue'
 import App from './views/App.vue'
+import { selectors } from './data-mapper'
 import { setupApp } from '~/logic/common-setup'
 
 // Firefox `browser.tabs.executeScript()` requires scripts return a primitive value
 (() => {
-  console.info('[vitesse-webext] Hello world from content script')
+  console.info('[vitesse-webext] Hello world from content new script')
+
+  for (const { match, selector } of selectors) {
+    if (match.test(location.href)) {
+      console.info(`[vitesse-webext] Matched selector for ${match.source}`)
+      console.info(`[vitesse-webext] Selector: ${selector}`)
+      break
+    }
+  }
 
   // communication example: send previous tab title from background page
   onMessage('tab-prev', ({ data }) => {
