@@ -2,7 +2,7 @@
 import { useToggle } from '@vueuse/core'
 import 'uno.css'
 
-import { extractors } from '../extractor'
+import { extractors } from '../../logic/extractor'
 
 // Get the curent item from the extracters
 let currentItemName = null

@@ -1,3 +1,3 @@
 import { useWebExtensionStorage } from '~/composables/useWebExtensionStorage'
 
-export const storageDemo = useWebExtensionStorage('show-facebook', true)
+export const showInPage = useWebExtensionStorage('show-in-page', true)
